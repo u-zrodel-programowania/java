@@ -8,15 +8,7 @@ import java.util.Scanner;
 
 public class Zadanie42 {
 	static int silnia2[] = new int[10]; //0..9
-	
-	public static int silnia( int k ) {
-		int sil = 1;
-		for(int i = 2; i<=k; i++) {
-			sil = sil * i;
-		}
-		return sil;
-	}
-	
+		
 	public static Boolean testuj(String napis) {
 		int liczba = Integer.parseInt( napis );
 		int suma = 0;
@@ -24,12 +16,9 @@ public class Zadanie42 {
 			char cyfraC = napis.charAt( i );
 			String cyfraS = cyfraC+"";
 			int cyfra = Integer.parseInt(cyfraS);
-			//System.out.println( cyfra + ": " + silnia(cyfra) );
 			suma = suma + silnia2[cyfra];
 		}
 		return ( suma == liczba );
-		//if( suma == liczba ) return true;
-		//else return false;
 	}
 	
 	public static void main(String[] args) {
@@ -52,10 +41,8 @@ public class Zadanie42 {
 			fw.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
